@@ -1,0 +1,13 @@
+﻿# Default ignored files
+/shelf/
+/workspace.xml
+# Rider ignored files
+/modules.xml
+/contentModel.xml
+/projectSettingsUpdater.xml
+/.idea.Orientation.iml
+# Datasource local storage ignored files
+/../../../../../../../../../../../../../:\Users\robde\OneDrive\Bureau\Travail épita\projet S2\Orientation\Orientation-Map\Orientation\.idea\.idea.Orientation\.idea/dataSources/
+/dataSources.local.xml
+# Editor-based HTTP Client requests
+/httpRequests/
