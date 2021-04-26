@@ -27,6 +27,7 @@ public class Player_Move : MonoBehaviour
             //toucher l'item
             inventory.AddItem(itemWorld.GetItem());
             itemWorld.DestroySelf();
+            RandomSpawn.enableDague();
         }
     }
 

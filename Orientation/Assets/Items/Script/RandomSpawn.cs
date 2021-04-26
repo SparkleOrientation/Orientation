@@ -6,20 +6,17 @@ using Random = UnityEngine.Random;
 
 public class RandomSpawn : MonoBehaviour
 {
-    // Start is called before the first frame update
     public int numberIndice;
     public int numberDague;
     public List<GameObject> spawnPool;
     public List<GameObject> spawnPosition;
     public List<GameObject> spawnPositionC;
-
+    public static List<GameObject> dagueSurMap;
     public float Radius = 10;
-    void Start()
-    {
-    }
-
+   
     public void spawnObject()
     {
+        dagueSurMap = new List<GameObject>();
         int randomPosition;
         GameObject toSpawn;
         Vector2 pos;
@@ -40,9 +37,10 @@ public class RandomSpawn : MonoBehaviour
             pos = spawnPositionC[randomPosition].transform.position;
             pos.x += Random.Range(-Radius, Radius);
             pos.y += Random.Range(-Radius, Radius);
-            Instantiate(toSpawn, pos, quaternion.identity);
+            dagueSurMap.Add(Instantiate(toSpawn, pos, quaternion.identity));
             spawnPositionC.Remove(spawnPositionC[randomPosition]);
         }
+        
     }
 
     private void OnDrawGizmos()
@@ -50,6 +48,17 @@ public class RandomSpawn : MonoBehaviour
          Gizmos.color = Color.green;
          Gizmos.DrawWireSphere(this.transform.position,Radius); 
     }
-    
 
+    public static void enableDague()
+    {
+        if (dagueSurMap.Count > 0)
+        {
+            var randomdague = Random.Range(0, dagueSurMap.Count);;
+            GameObject rectTransformdague = dagueSurMap[randomdague].transform.GetChild(0).gameObject;
+            rectTransformdague.gameObject.SetActive(true);
+            dagueSurMap.Remove(dagueSurMap[randomdague]);
+        }
+        
+    }
+    
 }
