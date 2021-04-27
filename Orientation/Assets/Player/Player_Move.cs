@@ -2,6 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Player_Move : Photon.MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Player_Move : Photon.MonoBehaviour
     private Vector2 dir;
     private Inventory inventory;
     public SpriteRenderer sr;
+    public Text PlayerNameText;
     public bool IsGrounded = false;
 
     [SerializeField] private UIInventory uiInventory;
@@ -27,6 +29,12 @@ public class Player_Move : Photon.MonoBehaviour
         {
             PlayerCamera.SetActive(true);
             PlayerVCam.SetActive(true);
+            PlayerNameText.text = PhotonNetwork.playerName;
+        }
+        else
+        {
+            PlayerNameText.text = photonView.owner.name;
+            PlayerNameText.color = Color.cyan;
         }
     }
 
