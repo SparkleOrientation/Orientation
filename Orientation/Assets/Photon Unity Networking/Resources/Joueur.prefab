@@ -568,7 +568,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &2702041002580687733
 Transform:
   m_ObjectHideFlags: 0
@@ -766,6 +766,7 @@ MonoBehaviour:
   sr: {fileID: 0}
   PlayerNameText: {fileID: 863107110635739198}
   IsGrounded: 0
+  MinimapIcon: {fileID: 2702041002580687732}
   uiInventory: {fileID: 2702041003260887371}
 --- !u!61 &2702041002601930796
 BoxCollider2D:

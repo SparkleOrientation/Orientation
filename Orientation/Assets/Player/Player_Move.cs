@@ -17,6 +17,7 @@ public class Player_Move : Photon.MonoBehaviour
     public SpriteRenderer sr;
     public Text PlayerNameText;
     public bool IsGrounded = false;
+    public GameObject MinimapIcon;
 
     [SerializeField] private UIInventory uiInventory;
 
@@ -29,6 +30,7 @@ public class Player_Move : Photon.MonoBehaviour
         {
             PlayerCamera.SetActive(true);
             PlayerVCam.SetActive(true);
+            MinimapIcon.SetActive(true);
             PlayerNameText.text = PhotonNetwork.playerName;
         }
         else
