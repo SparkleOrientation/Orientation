@@ -4,7 +4,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
 
-public class UIInventory : MonoBehaviour
+public class UIInventory : Photon.MonoBehaviour
 {
     private Inventory inventory;
 
@@ -29,11 +29,7 @@ public class UIInventory : MonoBehaviour
     }
     private void RefreshInventoryItems()
     {
-        foreach (Transform child in itemSlotContainer)
-        {
-            if (child == itemSlotTemplate) continue;
-            Destroy((child.gameObject));
-        }
+        
         int x = 0;
         float itemSlotCellSize = 145f;
         foreach (Item item in inventory.GetItemList())

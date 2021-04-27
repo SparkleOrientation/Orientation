@@ -11,6 +11,7 @@ public class Inventory
    public Inventory()
    {
       itemList = new List<Item>(); 
+      Debug.Log("Item List initialisé");
       Debug.Log(itemList.Count);
    }
 

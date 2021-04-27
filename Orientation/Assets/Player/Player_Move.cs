@@ -3,13 +3,18 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Player_Move : MonoBehaviour
+public class Player_Move : Photon.MonoBehaviour
 {
+    public PhotonView photonView;
+    public GameObject PlayerCamera;
+    public GameObject PlayerVCam;
     public float speed = 5f;
     private Rigidbody2D rb;
     private Animator anim;
     private Vector2 dir;
     private Inventory inventory;
+    public SpriteRenderer sr;
+    public bool IsGrounded = false;
 
     [SerializeField] private UIInventory uiInventory;
 
@@ -17,6 +22,12 @@ public class Player_Move : MonoBehaviour
     {
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
+        sr = GetComponent<SpriteRenderer>();
+        if (photonView.isMine)
+        {
+            PlayerCamera.SetActive(true);
+            PlayerVCam.SetActive(true);
+        }
     }
 
     private void OnTriggerEnter2D (Collider2D collider)
@@ -35,21 +46,28 @@ public class Player_Move : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        if (photonView.isMine)
+        {
+            PlayerCamera.SetActive(true);
+        }
     }
 
     private void Update()
     {
-        dir.x = Input.GetAxisRaw("Horizontal") ;
-        dir.y = Input.GetAxisRaw("Vertical");
-
-        if (dir.x != 0)
+        if (photonView.isMine)
         {
-            dir.y = 0;
-        }
-        
-        SetParam();
-    }
+            dir.x = Input.GetAxisRaw("Horizontal") ;
+            dir.y = Input.GetAxisRaw("Vertical");
 
+            if (dir.x != 0)
+            {
+                dir.y = 0;
+            }
+            SetParam();
+        }
+       
+    }
+    
     void SetParam()
     {
         transform.Translate(dir.x*speed*Time.fixedDeltaTime,dir.y*speed*Time.fixedDeltaTime,0);
@@ -62,4 +80,6 @@ public class Player_Move : MonoBehaviour
         }
 
     }
+
+   
 }
