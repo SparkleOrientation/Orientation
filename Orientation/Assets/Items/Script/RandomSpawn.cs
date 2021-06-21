@@ -16,30 +16,34 @@ public class RandomSpawn : MonoBehaviour
    
     public void spawnObject()
     {
-        dagueSurMap = new List<GameObject>();
-        int randomPosition;
-        GameObject toSpawn;
-        Vector2 pos;
-        for (int i = 0; i < numberIndice; i++)
+        if (PlayerPrefs.GetInt("gamecreated",0) == 1)
         {
-            toSpawn = spawnPool[0];
-            randomPosition  = Random.Range(0, spawnPosition.Count);
-            pos = spawnPosition[randomPosition].transform.position;
-            pos.x += Random.Range(-Radius, Radius);
-            pos.y += Random.Range(-Radius, Radius);
-            Instantiate(toSpawn, pos, quaternion.identity);
-            spawnPosition.Remove(spawnPosition[randomPosition]);
+            dagueSurMap = new List<GameObject>();
+            int randomPosition;
+            GameObject toSpawn;
+            Vector2 pos;
+            for (int i = 0; i < numberIndice; i++)
+            {
+                toSpawn = spawnPool[0];
+                randomPosition  = Random.Range(0, spawnPosition.Count);
+                pos = spawnPosition[randomPosition].transform.position;
+                pos.x += Random.Range(-Radius, Radius);
+                pos.y += Random.Range(-Radius, Radius);
+                Instantiate(toSpawn, pos, quaternion.identity);
+                spawnPosition.Remove(spawnPosition[randomPosition]);
+            }
+            for (int i = 0; i < numberDague; i++)
+            {
+                toSpawn = spawnPool[1];
+                randomPosition  = Random.Range(0, spawnPositionC.Count);
+                pos = spawnPositionC[randomPosition].transform.position;
+                pos.x += Random.Range(-Radius, Radius);
+                pos.y += Random.Range(-Radius, Radius);
+                dagueSurMap.Add(Instantiate(toSpawn, pos, quaternion.identity));
+                spawnPositionC.Remove(spawnPositionC[randomPosition]);
+            }
         }
-        for (int i = 0; i < numberDague; i++)
-        {
-            toSpawn = spawnPool[1];
-            randomPosition  = Random.Range(0, spawnPositionC.Count);
-            pos = spawnPositionC[randomPosition].transform.position;
-            pos.x += Random.Range(-Radius, Radius);
-            pos.y += Random.Range(-Radius, Radius);
-            dagueSurMap.Add(Instantiate(toSpawn, pos, quaternion.identity));
-            spawnPositionC.Remove(spawnPositionC[randomPosition]);
-        }
+        
         
     }
 
