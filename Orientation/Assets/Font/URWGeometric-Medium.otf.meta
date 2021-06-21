@@ -1,0 +1,38 @@
+fileFormatVersion: 2
+guid: ad4acbebafad14ba7b84df4fab233aea
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: URW Geometric
+  fontNames:
+  - URW Geometric
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: e2c79e505835b4f0d947f6b05a447f02, type: 3}
+  - {fileID: 12800000, guid: b3e54132c82284b5ebf2dd5d2020792e, type: 3}
+  - {fileID: 12800000, guid: 3bc833620d55f4d5783518b67cba17f7, type: 3}
+  - {fileID: 12800000, guid: 1087abc4731b441f0a54fbf78c360e9e, type: 3}
+  - {fileID: 12800000, guid: 9812cf156eb31429ea92a5f42bb69604, type: 3}
+  - {fileID: 12800000, guid: f0a86d4508f8446d6b1f227ab198f547, type: 3}
+  - {fileID: 12800000, guid: 81ca7aa64277647ce8f6813e8ddedaa5, type: 3}
+  - {fileID: 12800000, guid: a9c19bb8455f4489ea7d48087a24ccc4, type: 3}
+  - {fileID: 12800000, guid: 88bfcc8957b9147f78f1d7b45d591a0c, type: 3}
+  - {fileID: 12800000, guid: 3441832a767f64673b9f495f21a9574c, type: 3}
+  - {fileID: 12800000, guid: 63a2bf6a441a742088d12714847c2cec, type: 3}
+  - {fileID: 12800000, guid: f6cc270b21c3b4575b082563c7c9c1ac, type: 3}
+  - {fileID: 12800000, guid: 553d57dda766d4326b5b0a57799ac7d8, type: 3}
+  - {fileID: 12800000, guid: 16123efdb62c44028a9f7d39924625a6, type: 3}
+  - {fileID: 12800000, guid: 65fa809e1fd974c94a066b5435898b6e, type: 3}
+  - {fileID: 12800000, guid: f831a42f4995047b7a86dcda86c999d9, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
