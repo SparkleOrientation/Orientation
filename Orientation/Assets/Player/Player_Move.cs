@@ -14,10 +14,14 @@ public class Player_Move : Photon.MonoBehaviour
     private Animator anim;
     private Vector2 dir;
     private Inventory inventory;
-    public SpriteRenderer sr;
     public Text PlayerNameText;
     public bool IsGrounded = false;
     public GameObject MinimapIcon;
+    public GameObject DaggerObject;
+    public Transform FirePos;
+    public SpriteRenderer sr;
+    public BoxCollider2D br;
+    private bool daggerActive = false;
 
     [SerializeField] private UIInventory uiInventory;
 
@@ -26,6 +30,7 @@ public class Player_Move : Photon.MonoBehaviour
         inventory = new Inventory();
         uiInventory.SetInventory(inventory);
         sr = GetComponent<SpriteRenderer>();
+        br = GetComponent<BoxCollider2D>();
         if (photonView.isMine)
         {
             PlayerCamera.SetActive(true);
@@ -68,7 +73,18 @@ public class Player_Move : Photon.MonoBehaviour
         {
             dir.x = Input.GetAxisRaw("Horizontal") ;
             dir.y = Input.GetAxisRaw("Vertical");
-
+            if (Input.GetKeyDown(KeyCode.E))
+            {
+                daggerActive = !daggerActive;
+                if (daggerActive)
+                {
+                    DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, true);
+                }
+                else
+                {
+                    DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, false);
+                }
+            }
             if (dir.x != 0)
             {
                 dir.y = 0;
@@ -76,6 +92,13 @@ public class Player_Move : Photon.MonoBehaviour
             SetParam();
         }
        
+    }
+
+    private void Shoot()
+    {
+        
+        GameObject obj = PhotonNetwork.Instantiate(DaggerObject.name, new Vector2(FirePos.transform.position.x, FirePos.transform.position.y), Quaternion.identity, 0);
+        
     }
     
     void SetParam()
@@ -88,8 +111,12 @@ public class Player_Move : Photon.MonoBehaviour
             anim.SetFloat("lastMoveX",dir.x);
             anim.SetFloat("lastMoveY",dir.y);
         }
-
     }
-
-   
+    
+    [PunRPC] public void Kill()
+    {
+        Destroy(this);
+        this.gameObject.SetActive(false);
+    }
+    
 }
