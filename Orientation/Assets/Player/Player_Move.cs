@@ -23,8 +23,8 @@ public class Player_Move : Photon.MonoBehaviour
     public Transform FirePos;
     public SpriteRenderer sr;
     public BoxCollider2D br;
-    private bool daggerActive = false;
-
+    [PunRPC] private bool daggerActive = false;
+    [PunRPC] public bool gotDagger = false;
     [SerializeField] private UIInventory uiInventory;
 
     private void Awake()
@@ -45,6 +45,7 @@ public class Player_Move : Photon.MonoBehaviour
             PlayerNameText.text = photonView.owner.name;
             PlayerNameText.color = Color.cyan;
         }
+
     }
 
     private void OnTriggerEnter2D (Collider2D collider)
@@ -53,15 +54,18 @@ public class Player_Move : Photon.MonoBehaviour
         if (!(itemWorld is null))
         {
             //toucher l'item
-            var gotdague = false;
-            foreach (var item in inventory.GetItemList())
+            if (!gotDagger)
             {
-                if (item.itemType == Item.ItemType.Dague) gotdague = true;
+                foreach (var item in inventory.GetItemList())
+                {
+                    if (item.itemType == Item.ItemType.Dague) gotDagger = true;
+                }
             }
-
-            if (!(gotdague && itemWorld.GetItem().itemType == Item.ItemType.Dague))
+            
+            if (!(gotDagger && itemWorld.GetItem().itemType == Item.ItemType.Dague))
             {
                 inventory.AddItem(itemWorld.GetItem());
+                if (itemWorld.item.itemType == Item.ItemType.Dague) gotDagger = true;
                 if (itemWorld.item.itemType == Item.ItemType.Indice) // On trouve un indice donc on fait apparaitre les couteaux sur la minimap
                 {
                     var dagueSurMapL = GameObject.FindGameObjectsWithTag("DagueMiniMap");
@@ -101,15 +105,18 @@ public class Player_Move : Photon.MonoBehaviour
         {
             dir.x = Input.GetAxisRaw("Horizontal") ;
             dir.y = Input.GetAxisRaw("Vertical");
-            var gotdague = false;
+            if (Input.GetKey(KeyCode.LeftShift))
+            {
+                speed = 10;
+            }
+            if (Input.GetKeyUp(KeyCode.LeftShift))
+            {
+                speed = 3;
+            }
+            
             if (Input.GetKeyDown(KeyCode.E))
             {
-                foreach (var item in inventory.GetItemList())
-                {
-                    if (item.itemType == Item.ItemType.Dague) gotdague = true;
-                }
-
-                if (gotdague)
+                if (gotDagger)
                 {
                     daggerActive = !daggerActive;
                     if (daggerActive)

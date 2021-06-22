@@ -7,6 +7,7 @@ public class Dagger : Photon.MonoBehaviour
 {
     [PunRPC]
     public bool daggerActive = false;
+    public GameObject Player;
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (daggerActive)
@@ -16,7 +17,14 @@ public class Dagger : Photon.MonoBehaviour
             PhotonView target = collision.gameObject.GetComponent<PhotonView>();
             if (target != null && (!target.isMine || target.isSceneView))
             {
-                target.gameObject.GetComponent<PhotonView>().RPC("Kill",PhotonTargets.AllBuffered);
+                if (target.gameObject.GetComponent<Player_Move>().gotDagger)
+                {
+                    target.gameObject.GetComponent<PhotonView>().RPC("Kill",PhotonTargets.AllBuffered);
+                }
+                else
+                {
+                    Player.gameObject.SetActive(false);
+                }
             }
         }
     }

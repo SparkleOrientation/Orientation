@@ -25,6 +25,7 @@
     </explicitIncludes>
     <explicitExcludes>
       <Path>.idea</Path>
+      <Path>.uEcho</Path>
       <Path>Library</Path>
       <Path>Logs</Path>
       <Path>Temp</Path>

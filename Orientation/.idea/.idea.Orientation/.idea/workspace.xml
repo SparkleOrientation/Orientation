@@ -21,17 +21,11 @@
   <component name="ChangeListManager">
     <list default="true" id="50c61fe0-e506-41af-aa78-dddce28b4a22" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/Item.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Dagger.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Dagger.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/Joueur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/Joueur.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Player_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player_Move.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
@@ -53,12 +47,8 @@
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level0" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level0" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets.resS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptsOnlyCache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptsOnlyCache.yaml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ProtocolInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ProtocolInstance.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SceneVisibilityState.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp-Editor.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ScriptAssemblies/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/SourceAssetDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/SourceAssetDB" afterDir="false" />
@@ -66,9 +56,7 @@
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/501518-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/501518-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-c0db474298cec480fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-c0db474298cec480fb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/1.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/1.backup" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -99,7 +87,6 @@
         <option value="$PROJECT_DIR$/Assets/Items/Script/Inventory.cs" />
         <option value="$PROJECT_DIR$/Assets/dagger.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonView.cs" />
-        <option value="$PROJECT_DIR$/Assets/Dagger.cs" />
         <option value="$PROJECT_DIR$/Assets/Menu/MenuController.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/Item.cs" />
@@ -107,6 +94,7 @@
         <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Player_Move.cs" />
+        <option value="$PROJECT_DIR$/Assets/Dagger.cs" />
       </list>
     </option>
   </component>
@@ -190,7 +178,7 @@
       <workItem from="1624216260642" duration="2867000" />
       <workItem from="1624304410280" duration="8973000" />
       <workItem from="1624316845209" duration="1052000" />
-      <workItem from="1624371153206" duration="17211000" />
+      <workItem from="1624371153206" duration="19932000" />
     </task>
     <servers />
   </component>

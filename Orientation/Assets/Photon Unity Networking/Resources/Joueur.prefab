@@ -241,7 +241,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1491282993239455590}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.76, y: -0.28, z: 0}
+  m_LocalPosition: {x: -0.92, y: -0.3, z: 0}
   m_LocalScale: {x: 1.25, y: 1.25, z: 1.25}
   m_Children: []
   m_Father: {fileID: 2702041002601930799}
@@ -337,6 +337,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   daggerActive: 0
+  Player: {fileID: 2702041002601930792}
 --- !u!61 &6913678930867842988
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -361,8 +362,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.06, y: 0.12}
-  m_EdgeRadius: 2.99
+  m_Size: {x: 3.85, y: 3.86}
+  m_EdgeRadius: 1.09
 --- !u!58 &4360242737191297003
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -1169,6 +1170,7 @@ MonoBehaviour:
   FirePos: {fileID: 133228205203343338}
   sr: {fileID: 0}
   br: {fileID: 0}
+  gotDagger: 0
   uiInventory: {fileID: 2702041003260887371}
 --- !u!61 &2702041002601930796
 BoxCollider2D:
