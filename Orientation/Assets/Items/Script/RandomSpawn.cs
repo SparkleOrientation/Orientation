@@ -1,10 +1,12 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using Unity.Mathematics;
 using UnityEngine;
 using Random = UnityEngine.Random;
 
-public class RandomSpawn : MonoBehaviour
+public class RandomSpawn : Photon.MonoBehaviour
 {
     public int numberIndice;
     public int numberDague;
@@ -29,7 +31,8 @@ public class RandomSpawn : MonoBehaviour
                 pos = spawnPosition[randomPosition].transform.position;
                 pos.x += Random.Range(-Radius, Radius);
                 pos.y += Random.Range(-Radius, Radius);
-                Instantiate(toSpawn, pos, quaternion.identity);
+                Debug.Log(toSpawn.name);
+                PhotonNetwork.Instantiate(toSpawn.name, pos, quaternion.identity,0);
                 spawnPosition.Remove(spawnPosition[randomPosition]);
             }
             for (int i = 0; i < numberDague; i++)
@@ -39,30 +42,16 @@ public class RandomSpawn : MonoBehaviour
                 pos = spawnPositionC[randomPosition].transform.position;
                 pos.x += Random.Range(-Radius, Radius);
                 pos.y += Random.Range(-Radius, Radius);
-                dagueSurMap.Add(Instantiate(toSpawn, pos, quaternion.identity));
+                var spawned =  PhotonNetwork.Instantiate(toSpawn.name, pos, quaternion.identity, 0);
                 spawnPositionC.Remove(spawnPositionC[randomPosition]);
             }
         }
-        
-        
     }
 
     private void OnDrawGizmos()
     {
          Gizmos.color = Color.green;
          Gizmos.DrawWireSphere(this.transform.position,Radius); 
-    }
-
-    public static void enableDague()
-    {
-        if (dagueSurMap.Count > 0)
-        {
-            var randomdague = Random.Range(0, dagueSurMap.Count);;
-            GameObject rectTransformdague = dagueSurMap[randomdague].transform.GetChild(0).gameObject;
-            rectTransformdague.gameObject.SetActive(true);
-            dagueSurMap.Remove(dagueSurMap[randomdague]);
-        }
-        
     }
     
 }

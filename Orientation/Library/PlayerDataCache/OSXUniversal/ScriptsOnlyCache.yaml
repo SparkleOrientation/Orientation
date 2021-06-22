@@ -270,9 +270,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11834}
     - Class: 114
+      Script: {instanceID: 12020}
+    - Class: 114
       Script: {instanceID: 12068}
     - Class: 114
       Script: {instanceID: 12116}
+    - Class: 114
+      Script: {instanceID: 12576}
     - Class: 114
       Script: {instanceID: 12664}
     - Class: 114
@@ -288,6 +292,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 13374}
     - Class: 114
+      Script: {instanceID: 13390}
+    - Class: 114
       Script: {instanceID: 13570}
     - Class: 114
       Script: {instanceID: 13610}
@@ -295,6 +301,8 @@ ScriptsOnlyBuild:
       Script: {instanceID: 13674}
     - Class: 114
       Script: {instanceID: 13948}
+    - Class: 114
+      Script: {instanceID: 13954}
     - Class: 114
       Script: {instanceID: 14014}
     - Class: 114
@@ -336,6 +344,8 @@ ScriptsOnlyBuild:
     - Class: 223
       Script: {instanceID: 0}
     - Class: 224
+      Script: {instanceID: 0}
+    - Class: 225
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -970,7 +980,7 @@ ScriptsOnlyBuild:
     className: CinemachineOrbitalTransposer
   - hash:
       serializedVersion: 2
-      Hash: 0282a72054a2551699d0a8210a79fe86
+      Hash: 7a096bf3732967bd794979419d92c175
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: GameManager

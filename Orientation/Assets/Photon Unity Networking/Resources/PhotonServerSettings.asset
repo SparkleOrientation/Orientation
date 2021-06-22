@@ -40,4 +40,7 @@ MonoBehaviour:
   - RequestForPickupTimes
   - SetActive
   - Kill
+  - DestroySelf
+  - spawnObject
+  - enableDague
   DisableAutoOpenWizard: 1

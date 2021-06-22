@@ -36,12 +36,12 @@ public class Item
     {
         switch (itemType)
         {
-            default:
-                case ItemType.Bois:
-                case ItemType.Indice:
-                return true;
             case ItemType.Dague:
                 return false;
+            default:
+            case ItemType.Bois:
+            case ItemType.Indice:
+                return true;
         }
     }
 }

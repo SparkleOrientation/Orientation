@@ -20,28 +20,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="50c61fe0-e506-41af-aa78-dddce28b4a22" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/contentModel.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/indexLayout.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/indexLayout.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Orientation/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/GameManager.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/GameManager.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/Item.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/Item.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/Joueur.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/Joueur.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Photon Unity Networking/Resources/PhotonServerSettings.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Player/Player_Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Player/Player_Move.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainGame.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/MainMenu.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/ArtifactDB" beforeDir="false" afterPath="$PROJECT_DIR$/Library/ArtifactDB" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/13/13a2881fff6918a5a2980acf82511f64" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/1b/1bb14dccee8b51d26c9580c9fe909669" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/34/34dd9d7daae9c3e6528deeb057b4bf9a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/86/86c7f03dca28896b630f387615b40834" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/9a/9a2b2531bd3fafca1bd4c5ff488a329d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/bb/bbedba9c9bc8165c2aef065922547665" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/e9/e90ecef35313f7d30acbcfc060bbdfc0" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/Artifacts/f5/f5be82ce5c006dd71be77d9cffe8bd00" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentLayout-default.dwlt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/EditorInstance.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/EditorInstance.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/CurrentMaximizeLayout.dwlt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" beforeDir="false" afterPath="$PROJECT_DIR$/Library/InspectorExpandedItems.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/LastBuild.buildreport" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastBuild.buildreport" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Library/LastSceneManagerSetup.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp-firstpass.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp-firstpass.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Assembly-CSharp.dll" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Cinemachine.dll" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/Managed/Cinemachine.dll" afterDir="false" />
@@ -63,7 +54,6 @@
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level1" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/level1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/resources.assets.resS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets0.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets.resS" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/Data/sharedassets1.assets.resS" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptsOnlyCache.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/Library/PlayerDataCache/OSXUniversal/ScriptsOnlyCache.yaml" afterDir="false" />
@@ -76,31 +66,7 @@
       <change beforePath="$PROJECT_DIR$/Library/StateCache/Hierarchy/501518-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/Hierarchy/501518-mainStage.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-c0db474298cec480fb.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-c0db474298cec480fb.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-mainStage.json" beforeDir="false" afterPath="$PROJECT_DIR$/Library/StateCache/SceneView/8c2fbc-mainStage.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Library/expandedItems" beforeDir="false" afterPath="$PROJECT_DIR$/Library/expandedItems" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-05431917f687642eb90033cfd3a65443" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-12f21877224da45c581918adfc08f73e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-16b54c63af8264388a083023aa9c4f6e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-1d39467491f0a478292973cd128cc5a3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-282e029e633f84ef1937834c4c019836" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-34f1d59b16beb4b448862c0a560747d8" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-3b8dc9f97e2164606b91442389ae63d3" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-472986f5bf4b2455986e0d59d202f1ba" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-576d304633e2e45c6a76f6310c46421a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-696d32affe4af4b4aad4962de7c2cfa6" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-6a08a545b48064b9b9d3a3ff4877ff65" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-6c6acbbcf598f464b80767f0a9de2e67" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-76f811397e0bd4bc396c466cba978166" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-7af382ff417074de694d65b7d2bf835d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-80599394424cc46a5a950e8b4707fc7e" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-869e4de3d5a214ed0b061c881dac5b79" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-9f0a93a6f58b04d0eb8cf9ac046bd5eb" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-ae68fc7b361a845f287a1ac1d38e527a" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-b590f889efc944d678eb8c1f5737cd10" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-c921d378ef75a4dc2a1022bdbc90808d" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-df969cec98df742d3a21bbc5bb0d94ec" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-f0ea29d7ec94c4e3daacdf6f92ebded9" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-f409548e51da74ea7a067e14bbef6530" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Temp/UnityTempFile-f8b1cb10f7baa476c82aeb64116df8b4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/TagManager.asset" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/0.backup" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Temp/__Backupscenes/1.backup" beforeDir="false" afterPath="$PROJECT_DIR$/Temp/__Backupscenes/1.backup" afterDir="false" />
     </list>
@@ -128,18 +94,18 @@
         <option value="$PROJECT_DIR$/Assets/Items/UIInventory.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" />
-        <option value="$PROJECT_DIR$/Assets/Items/Script/Item.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/ItemIndice.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/RadarAnimation.cs" />
         <option value="$PROJECT_DIR$/Assets/Items/Script/Inventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" />
-        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
-        <option value="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/dagger.cs" />
         <option value="$PROJECT_DIR$/Assets/Photon Unity Networking/Plugins/PhotonNetwork/PhotonView.cs" />
         <option value="$PROJECT_DIR$/Assets/Dagger.cs" />
         <option value="$PROJECT_DIR$/Assets/Menu/MenuController.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/Script/UIInventory.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/Script/Item.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/Script/ItemWorld.cs" />
+        <option value="$PROJECT_DIR$/Assets/GameManager.cs" />
+        <option value="$PROJECT_DIR$/Assets/Items/Script/RandomSpawn.cs" />
         <option value="$PROJECT_DIR$/Assets/Player/Player_Move.cs" />
       </list>
     </option>
@@ -223,7 +189,8 @@
       <workItem from="1619514556678" duration="47000" />
       <workItem from="1624216260642" duration="2867000" />
       <workItem from="1624304410280" duration="8973000" />
-      <workItem from="1624316845209" duration="569000" />
+      <workItem from="1624316845209" duration="1052000" />
+      <workItem from="1624371153206" duration="17211000" />
     </task>
     <servers />
   </component>
@@ -248,17 +215,13 @@
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="0" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1614850460068">
-      <screen x="0" y="25" width="1680" height="949" />
-    </state>
-    <state x="0" y="157" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.949@0.25.1680.949" timestamp="1614850460068" />
-    <state x="294" y="29" key="SettingsEditor" timestamp="1614851022892">
-      <screen x="0" y="25" width="1680" height="949" />
-    </state>
-    <state x="294" y="29" key="SettingsEditor/0.25.1680.949@0.25.1680.949" timestamp="1614851022892" />
     <state x="848" y="125" width="732" height="742" key="VCS.FileHistoryDialog" timestamp="1619285118446">
       <screen x="0" y="25" width="1680" height="942" />
     </state>
     <state x="848" y="125" width="732" height="742" key="VCS.FileHistoryDialog/0.25.1680.942@0.25.1680.942" timestamp="1619285118446" />
+    <state x="756" y="228" width="672" height="678" key="search.everywhere.popup" timestamp="1624380253502">
+      <screen x="0" y="25" width="1680" height="937" />
+    </state>
+    <state x="756" y="228" width="672" height="678" key="search.everywhere.popup/0.25.1680.937@0.25.1680.937" timestamp="1624380253502" />
   </component>
 </project>

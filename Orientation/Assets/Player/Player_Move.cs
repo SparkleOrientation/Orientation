@@ -1,8 +1,10 @@
 ﻿using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class Player_Move : Photon.MonoBehaviour
 {
@@ -48,12 +50,38 @@ public class Player_Move : Photon.MonoBehaviour
     private void OnTriggerEnter2D (Collider2D collider)
     {
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
-        if (itemWorld != null)
+        if (!(itemWorld is null))
         {
             //toucher l'item
-            inventory.AddItem(itemWorld.GetItem());
-            itemWorld.DestroySelf();
-            RandomSpawn.enableDague();
+            var gotdague = false;
+            foreach (var item in inventory.GetItemList())
+            {
+                if (item.itemType == Item.ItemType.Dague) gotdague = true;
+            }
+
+            if (!(gotdague && itemWorld.GetItem().itemType == Item.ItemType.Dague))
+            {
+                inventory.AddItem(itemWorld.GetItem());
+                if (itemWorld.item.itemType == Item.ItemType.Indice) // On trouve un indice donc on fait apparaitre les couteaux sur la minimap
+                {
+                    var dagueSurMapL = GameObject.FindGameObjectsWithTag("DagueMiniMap");
+                        var dagueSurMap = dagueSurMapL.ToList();
+
+                        if (dagueSurMap.Count > 0)
+                        {
+                            var randomdague = Random.Range(0, dagueSurMap.Count);
+                            ;
+                            GameObject rectTransformDague = dagueSurMap[randomdague];
+                            Debug.Log((rectTransformDague.name) + rectTransformDague.tag);
+                            if (photonView.isMine)
+                            {
+                                rectTransformDague.GetComponent<Renderer>().enabled = true;
+                            }
+                            dagueSurMap.Remove(dagueSurMap[randomdague]);
+                        }
+                }
+                itemWorld.DestroySelf();
+            }
         }
     }
 
@@ -73,17 +101,27 @@ public class Player_Move : Photon.MonoBehaviour
         {
             dir.x = Input.GetAxisRaw("Horizontal") ;
             dir.y = Input.GetAxisRaw("Vertical");
+            var gotdague = false;
             if (Input.GetKeyDown(KeyCode.E))
             {
-                daggerActive = !daggerActive;
-                if (daggerActive)
+                foreach (var item in inventory.GetItemList())
                 {
-                    DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, true);
+                    if (item.itemType == Item.ItemType.Dague) gotdague = true;
                 }
-                else
+
+                if (gotdague)
                 {
-                    DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, false);
+                    daggerActive = !daggerActive;
+                    if (daggerActive)
+                    {
+                        DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, true);
+                    }
+                    else
+                    {
+                        DaggerObject.GetComponent<PhotonView>().RPC("SetActive", PhotonTargets.AllBuffered, false);
+                    }
                 }
+                
             }
             if (dir.x != 0)
             {

@@ -11,6 +11,7 @@ public class GameManager : Photon.MonoBehaviour
     public GameObject GameCanvas;
     public GameObject SceneCamera;
     public Text PingText;
+    public GameObject Spawner;
 
     private void Awake()
     {
@@ -25,6 +26,10 @@ public class GameManager : Photon.MonoBehaviour
     public void SpawnPlayer()
     {
         PhotonNetwork.Instantiate(PlayerPrefab.name, new Vector2(-76, 38), Quaternion.identity, 0);
+        if (PlayerPrefs.GetInt("gamecreated", 0) == 1)
+        {
+            Spawner.GetComponent<RandomSpawn>().spawnObject();
+        }
         GameCanvas.SetActive(false);  
         SceneCamera.SetActive(false);
     }

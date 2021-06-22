@@ -11,7 +11,7 @@ public class ItemWorld: MonoBehaviour
         return item;
     }
     
-    public void DestroySelf()
+    [PunRPC] public void DestroySelf()
     {
         Destroy(gameObject);
     }
