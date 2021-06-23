@@ -1,0 +1,25 @@
+fileFormatVersion: 2
+guid: e2c79e505835b4f0d947f6b05a447f02
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: URW Geometric
+  fontNames:
+  - URW Geometric
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 1087abc4731b441f0a54fbf78c360e9e, type: 3}
+  - {fileID: 12800000, guid: f0a86d4508f8446d6b1f227ab198f547, type: 3}
+  - {fileID: 12800000, guid: 81ca7aa64277647ce8f6813e8ddedaa5, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
