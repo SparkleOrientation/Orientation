@@ -46,19 +46,22 @@ public class MenuController : MonoBehaviour
 
     public void SetUserName()
     {
+        SoundManagerScript.PlaySound("menuMove");
         UsernameMenu.SetActive(false);
         PhotonNetwork.playerName = UsernameInput.text;
     }
 
     public void CreateRoom()
     {
+        SoundManagerScript.PlaySound("menuMove");
         PhotonNetwork.CreateRoom(JoinGameInput.text, new RoomOptions() {maxPlayers = 5}, null);
         PlayerPrefs.SetInt("gamecreated",1);
     }
 
     public void JoinGame()
     {
-         RoomOptions roomOptions = new RoomOptions();
+        SoundManagerScript.PlaySound("menuMove");
+        RoomOptions roomOptions = new RoomOptions();
          roomOptions.maxPlayers = 5;
          PhotonNetwork.JoinOrCreateRoom(JoinGameInput.text, roomOptions, TypedLobby.Default);
          PlayerPrefs.SetInt("gamecreated",0);

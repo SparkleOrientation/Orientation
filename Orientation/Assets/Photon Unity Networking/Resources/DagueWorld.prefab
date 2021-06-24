@@ -100,7 +100,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemType: 0
-    amount: 1
+    amount: 0
 --- !u!50 &754663075678932117
 Rigidbody2D:
   serializedVersion: 4

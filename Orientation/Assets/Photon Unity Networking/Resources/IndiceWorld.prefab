@@ -166,7 +166,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   item:
     itemType: 1
-    amount: 1
+    amount: 0
 --- !u!114 &-8801620055151034409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ MonoBehaviour:
   ObservedComponents: []
   ObservedComponentsFoldoutOpen: 1
   viewIdField: 0
-  instantiationId: 0
+  instantiationId: -1
   currentMasterID: -1
   isRuntimeInstantiated: 0
 --- !u!1 &2348770605911458755

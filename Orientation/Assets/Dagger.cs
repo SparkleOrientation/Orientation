@@ -19,6 +19,7 @@ public class Dagger : Photon.MonoBehaviour
             {
                 if (target.gameObject.GetComponent<Player_Move>().gotDagger)
                 {
+                    SoundManagerScript.PlaySound("kill");
                     target.gameObject.GetComponent<PhotonView>().RPC("Kill",PhotonTargets.AllBuffered);
                 }
                 else

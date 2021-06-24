@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Spawnable
   - Dague
+  - DagueMiniMap
+  - Ennemy
+  - Zone
   layers:
   - Default
   - TransparentFX

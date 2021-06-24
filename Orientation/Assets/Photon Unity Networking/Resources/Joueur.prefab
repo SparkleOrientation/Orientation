@@ -351,7 +351,7 @@ BoxCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.85, y: 0.22}
+  m_Offset: {x: 0.61, y: 0.26}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -362,8 +362,8 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 3.85, y: 3.86}
-  m_EdgeRadius: 1.09
+  m_Size: {x: 1.53, y: 2.29}
+  m_EdgeRadius: 0.13
 --- !u!58 &4360242737191297003
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -406,7 +406,7 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1583554085200402547}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 112.5}
   m_LocalScale: {x: 0.018601116, y: 0.018601116, z: 0.018601116}
   m_Children:
@@ -438,7 +438,7 @@ Canvas:
   m_SortingBucketNormalizedSize: 0
   m_AdditionalShaderChannelsFlag: 25
   m_SortingLayerID: 0
-  m_SortingOrder: 108
+  m_SortingOrder: 65
   m_TargetDisplay: 0
 --- !u!114 &6035014602776872347
 MonoBehaviour:
@@ -1047,7 +1047,7 @@ GameObject:
   - component: {fileID: -4252638161374058011}
   m_Layer: 0
   m_Name: Joueur
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1162,7 +1162,7 @@ MonoBehaviour:
   photonView: {fileID: 2702041002601930793}
   PlayerCamera: {fileID: 2702041002199068940}
   PlayerVCam: {fileID: 2702041003350496392}
-  speed: 3
+  speed: 2.5
   PlayerNameText: {fileID: 5457792128155296035}
   IsGrounded: 0
   MinimapIcon: {fileID: 2702041002580687732}
@@ -1197,7 +1197,7 @@ BoxCollider2D:
   m_AutoTiling: 0
   serializedVersion: 2
   m_Size: {x: 1.4, y: 1}
-  m_EdgeRadius: 0.1
+  m_EdgeRadius: 0.01
 --- !u!95 &2702041002601930798
 Animator:
   serializedVersion: 3

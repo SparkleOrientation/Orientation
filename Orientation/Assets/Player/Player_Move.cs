@@ -50,10 +50,13 @@ public class Player_Move : Photon.MonoBehaviour
 
     private void OnTriggerEnter2D (Collider2D collider)
     {
+        
+        
         ItemWorld itemWorld = collider.GetComponent<ItemWorld>();
         if (!(itemWorld is null))
         {
             //toucher l'item
+            
             if (!gotDagger)
             {
                 foreach (var item in inventory.GetItemList())
@@ -65,6 +68,7 @@ public class Player_Move : Photon.MonoBehaviour
             if (!(gotDagger && itemWorld.GetItem().itemType == Item.ItemType.Dague))
             {
                 inventory.AddItem(itemWorld.GetItem());
+                SoundManagerScript.PlaySound("getItem");
                 if (itemWorld.item.itemType == Item.ItemType.Dague) gotDagger = true;
                 if (itemWorld.item.itemType == Item.ItemType.Indice) // On trouve un indice donc on fait apparaitre les couteaux sur la minimap
                 {
@@ -87,6 +91,16 @@ public class Player_Move : Photon.MonoBehaviour
                 itemWorld.DestroySelf();
             }
         }
+
+        if (collider.CompareTag("Ennemy"))
+        {
+            Kill();
+        }
+
+        if (collider.CompareTag("Zone"))
+        {
+            collider.gameObject.GetComponent<zone>().AI.GetComponent<EnnemyFollowPlayer>().player = transform;
+        }
     }
 
     void Start()
@@ -99,19 +113,50 @@ public class Player_Move : Photon.MonoBehaviour
         }
     }
 
+   
     private void Update()
     {
+        var runSound = false;
         if (photonView.isMine)
         {
             dir.x = Input.GetAxisRaw("Horizontal") ;
             dir.y = Input.GetAxisRaw("Vertical");
+
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                if (!SoundManagerScript.audioSrc.isPlaying)
+                {
+                    SoundManagerScript.PlaySound("walk");
+                }
+            }
+
             if (Input.GetKey(KeyCode.LeftShift))
             {
+                runSound = true;
                 speed = 10;
+                
             }
             if (Input.GetKeyUp(KeyCode.LeftShift))
             {
                 speed = 3;
+                runSound = false;
+            }
+            
+            if (Input.GetAxisRaw("Horizontal") != 0 || Input.GetAxisRaw("Vertical") != 0)
+            {
+                if (!SoundManagerScript.audioSrc.isPlaying)
+                {
+                    if (runSound)
+                    {
+                        SoundManagerScript.PlaySound("run");
+
+                    }
+                    else
+                    {
+                        SoundManagerScript.PlaySound("walk");
+
+                    }
+                }
             }
             
             if (Input.GetKeyDown(KeyCode.E))
@@ -134,7 +179,7 @@ public class Player_Move : Photon.MonoBehaviour
             {
                 dir.y = 0;
             }
-            SetParam();
+            SetParam(runSound);
         }
        
     }
@@ -146,7 +191,7 @@ public class Player_Move : Photon.MonoBehaviour
         
     }
     
-    void SetParam()
+    void SetParam(bool runSound)
     {
         transform.Translate(dir.x*speed*Time.fixedDeltaTime,dir.y*speed*Time.fixedDeltaTime,0);
         anim.SetFloat("moveX", dir.x);
@@ -160,6 +205,7 @@ public class Player_Move : Photon.MonoBehaviour
     
     [PunRPC] public void Kill()
     {
+        SoundManagerScript.PlaySound("kill");
         Destroy(this);
         this.gameObject.SetActive(false);
     }
